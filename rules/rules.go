@@ -2,13 +2,6 @@ package rules
 
 import "github.com/ShamanR/checkout_cart/items"
 
-//Rule{"RuleName"}.Condition(ForSku("A"), ForExactCnt(100)).Discount(Price(100))
-//Rule{"RuleName2"}.Condition(ForSku("A"), ForEveryCnt(3)).Discount(EveryCntPrice(100))
-//FirstOne(
-//  Rule{"RuleName"}.Condition(ForSku("A"), ForExactCnt(100)).Discount(Price(100))
-//  Rule{"RuleName2"}.Condition(ForSku("A"), ForEveryCnt(3)).Discount(EveryCntPrice(100))
-//)
-//
 func NewRule(name string) *rule {
 	s := func(item items.ItemInterface, currentCnt int64) bool { return false }
 	d := func(item items.ItemInterface, currentCnt int64) int64 { return int64(0) }

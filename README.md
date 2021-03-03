@@ -1,5 +1,5 @@
 # Simple Checkout calculator 
-[![GoDoc](https://godoc.org/github.com/ShamanR/checkout-cart?status.png)](https://godoc.org/github.com/github.com/ShamanR/checkout-cart)
+[![GoDoc](https://godoc.org/github.com/ShamanR/checkout_cart?status.png)](https://godoc.org/github.com/ShamanR/checkout_cart)
 [![Go](https://github.com/ShamanR/checkout_cart/actions/workflows/go.yml/badge.svg)](https://github.com/ShamanR/checkout_cart/actions/workflows/go.yml)
 
 It is a simple test project It allows you to create market checkout cart And add different kinds of adv campaigns

@@ -9,6 +9,9 @@ func Price(newPrice int64) func(item items.ItemInterface, currentCnt int64) int6
 }
 
 func EveryCntPrice(newPrice int64, cnt int64) func(item items.ItemInterface, currentCnt int64) int64 {
+	if cnt == 0 {
+		panic("impossible to create rule with cnt 0")
+	}
 	return func(item items.ItemInterface, currentCnt int64) int64 {
 		discountCnt := currentCnt / cnt
 		ordinaryCnt := currentCnt - discountCnt*cnt
