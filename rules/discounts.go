@@ -2,12 +2,16 @@ package rules
 
 import "github.com/ShamanR/checkout_cart/items"
 
-func Price(newPrice int64) func(item items.ItemInterface, currentCnt int64) int64 {
+// Returns new price for item
+// Similar to newPricePerItem*cnt
+func Price(newPricePerItem int64) func(item items.ItemInterface, currentCnt int64) int64 {
 	return func(item items.ItemInterface, currentCnt int64) int64 {
-		return newPrice*currentCnt - currentCnt*item.GetPrice()
+		return newPricePerItem*currentCnt - currentCnt*item.GetPrice()
 	}
 }
 
+// Returns Discount Calculator
+// every CNT items in the cart will have newPrice, all others will have ordinary price
 func EveryCntPrice(newPrice int64, cnt int64) func(item items.ItemInterface, currentCnt int64) int64 {
 	if cnt == 0 {
 		panic("impossible to create rule with cnt 0")
