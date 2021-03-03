@@ -37,3 +37,4 @@ total := ch.Total()// 550
 
 ## Install
 
+`go get github.com/ShamanR/checkout_cart`
